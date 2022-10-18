@@ -41,7 +41,7 @@ public abstract class Animal {
     {
         this.nome = nome;
     }
-
+// doenca
     public void setEspecie(String especie) 
     {
         this.especie = especie;
