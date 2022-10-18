@@ -50,6 +50,6 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "id: " + this.id + "\n:nome: " + this.nome + "\nespecie: " + this.especie;
+        return "id: " + this.id + "\n:nome: " + this.nome + "\n especie: " + this.especie;
     }
 }
