@@ -24,7 +24,15 @@ public class Aves extends Animal {
     public String toString() {
         return super.toString()
             + "\nEspecialidade: " + this.plumagem;
-
-
     }
+
+    public static Aves verificaId(int id) throws Exception{
+        for (Aves aves: aves) {
+            if (aves.getId() == id) {
+                return aves;
+            } 
+        }
+        throw new Exception("Ave não encontrada");   
+    } 
+
 }

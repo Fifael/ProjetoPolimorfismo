@@ -28,4 +28,12 @@ public class Mamiferos extends Animal {
 
     }
 
+    public static Mamiferos verificaId(int id) throws Exception {
+        for (Mamiferos mamiferos : mamiferos) {
+            if (mamiferos.getId() == id) {
+                return mamiferos;
+            }
+        }
+        throw new Exception("Mamifero não encontrado. ");
+    }
 }

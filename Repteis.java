@@ -29,4 +29,13 @@ public class Repteis extends Animal {
                       + "\nEspecialidade: " + this.habitat;
 
     }
+
+    public static Repteis verificaId(int id) throws Exception{
+        for (Repteis repteis : repteis) {
+            if (repteis.getId() == id) {
+                return repteis;
+            }
+        }
+        throw new Exception("Reptel não encontrado. ");
+    }
 }

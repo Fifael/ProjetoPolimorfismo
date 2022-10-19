@@ -11,38 +11,38 @@ public abstract class Animal {
     protected Animal (int id, String nome, String especie)
 
     {
-        this.id = id;
-        this.nome = nome;
-        this.especie = especie;
+        this.setId(id);
+        this.setNome(nome);
+        this.setEspecie(especie);
 
         animais.add(this);
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public String getEspecie()
     {
-        return this.especie;
+        return especie;
     }
 
     
-    public void setId(int id)
+    private void setId(int id)
     {
         this.id = id;
     }
 
-    public void setNome(String nome) 
+    private void setNome(String nome) 
     {
         this.nome = nome;
     }
-// doenca
-    public void setEspecie(String especie) 
+
+    private void setEspecie(String especie) 
     {
         this.especie = especie;
     }
@@ -50,6 +50,6 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "id: " + this.id + "\n:nome: " + this.nome + "\n especie: " + this.especie;
+        return "id: " + this.getId() + "\n:nome: " + this.getNome() + "\n especie: " + this.getEspecie();
     }
 }
