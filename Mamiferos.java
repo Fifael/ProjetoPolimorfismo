@@ -24,7 +24,7 @@ public class Mamiferos extends Animal {
     @Override
     public String toString() {
         return super.toString()
-            + "\nEspecialidade: " + this.tempoDeGestacao;
+            + "\n Especialidade: " + this.gettempoDeGestacao();
 
     }
 
@@ -36,4 +36,25 @@ public class Mamiferos extends Animal {
         }
         throw new Exception("Mamifero não encontrado. ");
     }
+
+    public static Mamiferos ExcluiID(int id) throws Exception {
+        for (Mamiferos mamiferos : Mamiferos.mamiferos) {
+            if (mamiferos.getId() == id) {
+                Mamiferos.mamiferos.remove(mamiferos);
+                
+            }
+        }
+        return null;
+/*
+ *  List<String> names = ....
+    for (String name : names) {
+    // Do something
+    names.remove(name).
+ * 
+ * 
+ * 
+*/
+}
+
+
 }

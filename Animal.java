@@ -50,6 +50,28 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "id: " + this.getId() + "\n:nome: " + this.getNome() + "\n especie: " + this.getEspecie();
+        return "\n id:  " + this.getId() + "\n nome: " + this.getNome() + "\n especie: " + this.getEspecie();
     }
+
+    public static Animal AnimalID(int id) throws Exception {
+            for (Animal animal : animais) {
+                if (animal.getId() == id) {
+                    return animal;
+                } 
+                }  
+                throw new Exception ("Animal não encontrado. "); 
+            }
+
+
+
+
+    public static Animal excluiAnimal(int id) throws Exception{
+        for (Animal animal : Animal.animais){
+            if (animal.getId() == id)
+                Animal.animais.remove(animal);
+               
+        }
+        return null;
+    }
+
 }

@@ -52,7 +52,7 @@
 
     @Override
     public String toString(){
-        return " Id: " + id + " Data: " + data + " Descrição: " + descricao + " Animal: " + animal + "\n\t ";
+        return " Id: \n" + this.getId() + " Data: \n" + this.getData() + " Descrição: \n " + this.getDescricao() + " Animal: \n " + this.getAnimal() + "\n\t ";
     }
 
 }

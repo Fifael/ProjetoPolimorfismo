@@ -13,8 +13,13 @@ public class Zoobotanico {
             System.out.println("2 - Listar Jaula");
             System.out.println("3 - Cadastrar Animal");
             System.out.println("4 - Listar Animal");
-            System.out.println("5 - Cadastrar Alimentação");
-            System.out.println("6 - Listar Alimentação");
+            System.out.println("5 - Cadastro Alimentação");
+            System.out.println("6 - Listar Alimentação");            
+            System.out.println("7 - Excluir Animal");
+            
+
+            
+
             menu = scanner.nextInt();
             switch (menu) {
                 case 0:
@@ -33,11 +38,15 @@ public class Zoobotanico {
                     listarAnimal();
                     break;
                 case 5:
-                    cadastrarAlimentacao(scanner);
+                cadastrarAlimentacao(scanner);
                     break;
                 case 6:
-                    listarAlimentacao();
+                listarAlimentacao();
                     break;
+                case 7:
+                excluirAnimal(scanner);
+                   break; 
+
 
             }
         } while (menu != 0);
@@ -69,8 +78,8 @@ public class Zoobotanico {
         System.out.print("nome: ");
         String nome = scanner.next();
         System.out.print("Especie: [M] MAMIFERO [A] AVES [R] REPTEIS ");
-        String especie = scanner.next();
-
+        String especie = scanner.next().toUpperCase().trim();
+        
         switch (especie) {
             case "M":
                 System.out.println("Qual o tempo de gestação");
@@ -107,7 +116,7 @@ public class Zoobotanico {
         System.out.print("Descrição: ");
         String descrição = scanner.next();
         System.out.print("Especie: [M] MAMIFERO [A] AVES [R] REPTEIS ");
-        String especie = scanner.next();
+        String especie = scanner.next().toUpperCase().trim();
 
         try {
             switch (especie) {
@@ -131,6 +140,7 @@ public class Zoobotanico {
                 default:
                     System.out.println("Digite uma opção coerente");
                     break;
+                    
             }
         } catch (Exception e) {
             System.out.println("Operação inválida");
@@ -139,8 +149,31 @@ public class Zoobotanico {
 
     public static void listarAlimentacao() {
         for (Alimentação alimentação : Alimentação.alimentacoes) {
-            System.out.println(alimentação);
+            System.out.println(alimentação.toString());
         }
     }
 
-}
+    public static void excluirAnimal(Scanner scanner) {
+        System.out.println("Excluir animal");
+        System.out.print("Digite o Id do animal a ser excluido: ");
+        try {
+        int IdAnimal = scanner.nextInt();
+        Animal IdAnimalVerificado = Animal.AnimalID(IdAnimal);
+            Animal.excluiAnimal(IdAnimal);
+            System.out.println("Verificado o Id do animal a ser excluido: ");
+        } catch (Exception e) {
+            System.out.println("Operação inválida");  
+        }
+       
+    }
+        
+
+    
+    }
+
+
+
+
+    
+
+

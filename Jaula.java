@@ -41,7 +41,7 @@ public class Jaula {
 
     @Override
     public String toString() {
-        return "Id: " + this.getId() + " Nome: " + this.getNome() + " Tipo: " + this.getTipo();
+        return "\n Id: " + this.getId() + "\n Nome: " + this.getNome() + "\n Tipo: " + this.getTipo();
     }
 
 }
