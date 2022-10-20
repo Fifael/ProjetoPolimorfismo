@@ -24,7 +24,7 @@ public class Mamiferos extends Animal {
     @Override
     public String toString() {
         return super.toString()
-            + "\n Especialidade: " + this.gettempoDeGestacao();
+            + "\n Tempo de gestação: " + this.gettempoDeGestacao();
 
     }
 

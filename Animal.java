@@ -64,7 +64,6 @@ public abstract class Animal {
 
 
 
-
     public static Animal excluiAnimal(int id) throws Exception{
         for (Animal animal : Animal.animais){
             if (animal.getId() == id)

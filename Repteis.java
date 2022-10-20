@@ -26,7 +26,7 @@ public class Repteis extends Animal {
               @Override
               public String toString() {
                   return super.toString()
-                      + "\nEspecialidade: " + this.habitat;
+                      + "\nHabitat: " + this.habitat;
 
     }
 

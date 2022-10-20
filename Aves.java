@@ -23,7 +23,7 @@ public class Aves extends Animal {
     @Override
     public String toString() {
         return super.toString()
-            + "\nEspecialidade: " + this.getplumagem();
+            + "\n Plumagem: " + this.getplumagem();
     }
 
     public static Aves verificaId(int id) throws Exception{
